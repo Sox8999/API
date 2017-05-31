@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery Functions</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+      $(document).ready(function() {
+        $('#click').click(function() {
+          $('#hide').hide();
+        });
+        $('#show').click(function() {
+          $('#hide').show();
+        });
+        $('#toggle').click(function() {
+          $('h3').toggle();
+        });
+        $('#flip').click(function() {
+          $('#panel').slideDown();
+        });
+        $('#up').click(function() {
+          $('#panel').slideUp();
+        });
+        $('#flip1').click(function(){
+          $('#panel1').slideToggle();
+        });
+        $('#fade').click(function(){
+          $('#fade1').fadeToggle(2500);
+          $('#fade2').fadeToggle(3000);
+        });
+        $('#add').click(function(){
+          $('#red').addClass('red');
+        });
+        $('#before').click(function(){
+          $('#red').before("Text before!");
+        });
+        $('#after').click(function(){
+          $('#red').after("Text after!");
+        });
+        $('#append').click(function(){
+          $('#red').append("Appended text!");
+        });
+
+      });
+      </script>
+
+<style>
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: blue;
+    border: solid 1px black;
+    color: white;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+#panel1, #flip1 {
+    padding: 5px;
+    text-align: center;
+    background-color: red;
+    border: solid 1px black;
+    color: white;
+}
+
+#panel1 {
+    padding: 50px;
+    display: none;
+}
+
+#fade1 {
+  height: 80px;
+  width: 80px;
+  display: none;
+  background-color: red;
+}
+#fade2 {
+  height: 80px;
+  width: 80px;
+  display: none;
+  background-color: blue;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+</style>
+<body>
+
+<button id = "click">Click Here to Hide</button>
+<button id ="show">Click Here to Show</button>
+<p id = "hide"> This paragraph will hide and show when you click the correlating buttons! </p>
+<br>
+<button id="toggle">Click Here to Toggle</button>
+<p> <h3>Click the toggle button to see me disappear and reappear!</h3> This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!
+This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!
+This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph!
+This is a paragraph!This is a paragraph!This is a paragraph!This is a paragraph! </p>
+<br>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+<br>
+<button id="up">Click to slide the pane up!</button>
+<br>
+<br>
+<div id="flip1">Click to toggle the panel!</div>
+<div id="panel1">Hello world! You toggled me!</div>
+<br>
+<button id="fade">Click to toggle fade boxes!</button>
+<br>
+<div id="fade2"></div>
+<br>
+<div id="fade1"></div>
+<br>
+
+
+<button id="add">Add Class to the paragraph</button>
+<p id="red"> This is a paragraph and I will change to red and size XXLARGE </p>
+<br>
+<button id="before">Before</button>
+<br>
+<button id="after">After</button>
+<br>
+<button id="append">Append</button>
+<br>
+<button>HTML</button>
+<p> This is a paragraph! </p>
+<br>
+<button>Attr</button>
+<p> This is a paragraph! </p>
+<br>
+<button>Val</button>
+<p> This is a paragraph! </p>
+<br>
+<button>Text</button>
+<p> This is a paragraph! </p>
+<br>
+<button>Data</button>
+<p> This is a paragraph! </p>
+
+
+</body>
+</html>
