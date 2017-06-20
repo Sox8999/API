@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+      <title> User Table </title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+      <script>
+
+            $(document).ready(function(){
+
+              $('form').submit(function(){
+                return false;
+	             });
+
+
+              });
+            $('document').on('click', 'button', function() {
+	               $first_name = $('#first_name').val();
+	               $last_name = $('#last_name').val();
+	               $email = $('#email').val();
+	               $contact_no = $('#contact_no').val();
+
+                 $('table').append('<tr><td>'+$first_name+'</td>'+'<td>'+$last_name+'</td>'+'<td>'+$email+'</td>'+'<td>'+$contact_no+'</td></tr>');
+            });
+
+      </script>
+
+      <style>
+      table {
+          border: 1px solid black;
+          width: 25%;
+      }
+      </style>
+</head>
+<body>
+  <table>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Contact #</th>
+  </thead>
+      <tr>
+        <td> Bryse </td>
+        <td> Roeben </td>
+        <td> bwroeben@gmail.com </td>
+        <td> 9169539199 </td>
+        </tr>
+</table>
+<div>
+  <h2>Add Users</h2>
+</div>
+<form>
+  First Name <input type= 'text' name= 'first_name'>
+  <br>
+  Last Name <input type= 'text' name= 'last_name'>
+  <br>
+  Email <input type= 'text' name= 'email'>
+  <br>
+  Contact No <input type ='tel' name= 'contact_no'>
+  <br>
+  <button type='submit'>Add User</button>
+
+</form>
+</body>
+</html>
